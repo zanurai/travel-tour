@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  height: 100vh;
+}
+
+.max_padd_container {
+  @apply mx-auto max-w-[1440px] px-6 lg:px-20 2xl:px-0;
+}
+
+.max-container {
+  @apply mx-auto max-w-[1440px];
+}
+
+.padding-container {
+  @apply px-6 lg:px-20 2xl:px-0;
+}
+
+.btn_secondary {
+  @apply bg-secondary text-white;
+}
+
+.h2 {
+  @apply text-[44px] leading-tight md:text-[55px] md:leading-[1.3] mb-4 font-bold;
+}
+
+.h3 {
+  @apply text-[32px] leading-tight md:text-[36px] md:leading-[1.3] mb-4 font-semibold;
+}
+@layer base {
+  .active {
+    @apply text-secondary relative flex-1 after:w-full after:h-[1px] after:bg-secondary after:absolute after:bottom-1 after:right-0;
+  }
+
+  .h1 {
+    @apply text-[48px] leading-tight md:text-[72px] md:leading-[1.3] mb-8 font-bold;
+  }
+}
